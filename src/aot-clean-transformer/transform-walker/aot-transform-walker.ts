@@ -191,6 +191,7 @@ export class AotTransformWalker extends BaseTransformWalker<AotWalkerContext> {
           undefined,
           node.modifiers,
           node.name,
+          undefined,
           node.type,
           node.initializer
         );
