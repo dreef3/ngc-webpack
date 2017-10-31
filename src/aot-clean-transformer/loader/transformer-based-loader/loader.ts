@@ -34,7 +34,7 @@ export interface AotCleanupLoaderOptions {
 }
 
 function init(this: l.LoaderContext & { _compilation: any }): void {
-  const plugin = findPlugin(this._compilation);
+  const plugin = findPlugin(this._compilation.compiler);
   const options: AotCleanupLoaderOptions = loaderUtils.getOptions(this) || {};
 
   if (options.disable === false) {

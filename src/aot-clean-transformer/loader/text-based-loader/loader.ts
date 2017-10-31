@@ -235,7 +235,7 @@ export function aotCleanLoader(this: l.LoaderContext & { _compilation: any }, so
   if (!program) {
     try {
       const self = this;
-      const plugin = findPlugin(self._compilation);
+      const plugin = findPlugin(self._compilation.compiler);
       const options: AotCleanupLoaderOptions = loaderUtils.getOptions(this) || {};
 
       if (options.disable === false) {
